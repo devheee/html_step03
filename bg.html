@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_step03 : bg</title>
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <style>
+        .bg {
+            position: relative;
+            height: 600px;
+            /* background-image: url(../img/m01.jpg);
+    background-color: tomato;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; */
+            background: url(./img/m01.jpg) no-repeat fixed center center/cover;
+
+            margin: 0 0 2000px 0;
+        }
+
+        .bg::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(to left, transparent 30%, #444 70%)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+    </div>
+</body>
+
+</html>
