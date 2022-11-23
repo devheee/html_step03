@@ -36,7 +36,7 @@
             height: 100px;
             border-radius: 50%;
             background: #ff0;
-            animation: sunMove 2s linear infinite;
+            animation: sunMove 5s linear infinite;
             font-size: 0;
         }
 
@@ -87,29 +87,55 @@
         .sun .sp2::before {
             content: "";
             position: absolute;
-            bottom: 100px;
-            left: calc(50% - 50px);
+            top: -35px;
+            left: calc(-13%);
             width: 4px;
             height: 50px;
             border-radius: 2px;
             background: #ff0;
+            transform: rotate(-45deg);
         }
 
         .sun .sp2::after {
             content: "";
             position: absolute;
-            bottom: -60px;
-            left: calc(50% - 2px);
+            bottom: -40px;
+            left: calc(110%);
             width: 4px;
             height: 50px;
             border-radius: 2px;
             background: #ff0;
+            transform: rotate(135deg);
+        }
+
+        .sun .sp3::before {
+            content: "";
+            position: absolute;
+            top: -30px;
+            left: calc(120%);
+            width: 4px;
+            height: 50px;
+            border-radius: 2px;
+            background: #ff0;
+            transform: rotate(50deg);
+        }
+
+        .sun .sp3::after {
+            content: "";
+            position: absolute;
+            bottom: -43px;
+            left: calc(-15%);
+            width: 4px;
+            height: 50px;
+            border-radius: 2px;
+            background: #ff0;
+            transform: rotate(45deg);
         }
 
 
         @keyframes sunMove {
             to {
-                transform: rotate();
+                transform: rotate(360deg);
             }
         }
     </style>
@@ -122,6 +148,7 @@
         <div class="sun">
             <span class="sp">sun</span>
             <span class="sp2">sun</span>
+            <span class="sp3">sun</span>
         </div>
     </div>
 </body>
