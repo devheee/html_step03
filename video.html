@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>html_step03 : video</video></title>
+    <title>html_step03 : video</title>
     <link rel="stylesheet" href="./css/reset.css">
     <style>
         .video {
             position: relative;
+            overflow: hidden;
         }
 
         .video p {
@@ -61,7 +62,7 @@
             background: #ff0;
         }
 
-        .sun span::before {
+        .sun .sp::before {
             content: "";
             position: absolute;
             top: -60px;
@@ -72,7 +73,29 @@
             background: #ff0;
         }
 
-        .sun span::after {
+        .sun .sp::after {
+            content: "";
+            position: absolute;
+            bottom: -60px;
+            left: calc(50% - 2px);
+            width: 4px;
+            height: 50px;
+            border-radius: 2px;
+            background: #ff0;
+        }
+
+        .sun .sp2::before {
+            content: "";
+            position: absolute;
+            top: -60px;
+            left: calc(50% - 2px);
+            width: 4px;
+            height: 50px;
+            border-radius: 2px;
+            background: #ff0;
+        }
+
+        .sun .sp2::after {
             content: "";
             position: absolute;
             bottom: -60px;
@@ -96,7 +119,10 @@
     <div class="video">
         <video src="./img/video.mp4" autoplay muted loop></video>
         <p>MY MOVIE</p>
-        <div class="sun"><span>sun</span></div>
+        <div class="sun">
+            <span class="sp">sun</span>
+            <span class="sp2">sun</span>
+        </div>
     </div>
 </body>
 
